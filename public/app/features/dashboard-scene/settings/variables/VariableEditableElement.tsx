@@ -131,7 +131,7 @@ export class VariableEditableElement implements EditableDashboardElement, BulkAc
 
     dashboardEditActions.addVariable({
       source: set,
-      addedObject: this.variable.clone({ key: undefined }),
+      addedObject: this.variable.clone({ key: undefined, name: `${this.variable.state.name}_copy` }),
     });
     DashboardInteractions.variableActionButtonClicked('duplicate', { type: this.variable.state.type });
   }
